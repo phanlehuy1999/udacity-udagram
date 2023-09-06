@@ -104,10 +104,8 @@ router.post('/', async (req: Request, res: Response) => {
     email: email,
     passwordHash: generatedHash,
   });
-console.log('asdf');
   // @ts-ignore
   const savedUser = await newUser.save();
-  console.log('ndhgdhndg');
 
 
   const jwt = generateJWT(savedUser);
